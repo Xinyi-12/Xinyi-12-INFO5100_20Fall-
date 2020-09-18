@@ -6,7 +6,7 @@ Assignment01
 
   
 
-  - Data：SystemManager,Student,Professor,Course
+  - Data：Name,SystemManager,Student,Professor,Course
   - Behavior：notice,commit,punishAssignment,showCourseInfo,punishFile,checkAssignments
 
 ​                                    punishAssignment,showAssignment,checkAssignment
@@ -25,7 +25,7 @@ Assignment01
   -  Behavior:
 
 - *-File*
-  -  Data:name,format,size
+  -  Data:Name,Format,Size
   - Behavior:
 
 - *-Teacher*
@@ -110,19 +110,19 @@ cindy.logOut;
 2.Design a pet adoption platform
 
 - -*Pet*
-  - Data:breed,name,age,gender,size,length,color,location,fee
+  - Data:Breed,Name,Age,Gender,Size,Length,Color,Location,Fee
   - behavior:
 
 - *-Adopter*
-  - Data:loginCredentials,location,email,phone,name,applicationInfo
+  - Data:loginCredentials,Location,Email,Phone,Name,ApplicationInfo
   - Behavior:log,search,adopt,accessAnimalRescueOrganization,submitApplication,payAdoptionfees,submitApplicationAgain, askAboutPet,favoritePet,chooseHowToGetThePet
 
 - *-AnimalRescueOrganization*
-  - Data:Pet,email,phoneNumber, Adoptionfees
+  - Data:Pet,Email,PhoneNumber, Adoptionfees
   - Behavior:sendReceipt
 
 - *-adoptionPlatform*
-  - Data:Pet,AnimalRescueOrganization
+  - Data:Name,Pet,AnimalRescueOrganization
   - Behavior:checkout,showinfo,savePetToFavorite
 
 ```java
@@ -153,20 +153,20 @@ else
 3.Design an app to book airline ticket.
 
 - *-Passenger*
-  - Data:loginCredentials,Gender,Name,DateOfBirth,PhoneNumber,creditCard,idCard,account
+  - Data:loginCredentials,Gender,Name,DateOfBirth,PhoneNumber,CreditCard,IdCard,Account
   - Behavior:logIn,searchTickets,comparePrice,chooseFight,selectSeat,buy,dropTickets,
              selectOtherFight,chooseVipService,getTicket,needHelp,confirmTicket
 
 - *-Fight*
-  - Data: flyDate,starPoint,destination,ticket,fightCompany,fightId,price
+  - Data: FlyDate,StarPoint,Destination,Ticket,FightCompany,FightId,Price
   - Behavior:
 
 - *-Ticket*
-  - Data:SeatNumber,price,id
+  - Data:SeatNumber,Price,Id
   - Behavior:
 
 - *-App*
-  - Data:name,Fight,Ticket,passenger
+  - Data:Name,Fight,Ticket,Passenger
   - Behavior:checkOut,printOutTickets,refund,providePhoneNumber,provideOnlineService
 
 ```
@@ -207,23 +207,23 @@ else
 4.Design a course registration platform.
 
 - *-Student*
-  - Data:loginCredentials,name,id,password,email
+  - Data:loginCredentials,Name,Id,Password,Email
   - Behavior:logIn,searchCourse,registerCourse,changeOtherCourse,dropCourse
 
 - *-course registration platform*
-  - Data:name,Course,Student
+  - Data:Name,Course,Student,Professor,SystemManager
   - Behavior:notice,showCourseInfo
 
 - *-Course*
-  - Data:name,id,schedule,room,location,Professor
+  - Data:Name,Id,Schedule,Room,Location,Professor
   - Behavior:
 
 - *-Professor*
-  - Data:name,id
+  - Data:Name,Id
   - Behavior:
 
 - *-SystemManager*
-  - Data:name,id
+  - Data:Name,Id
   - Behavior:checkOut,reAccess
 
 ```java
@@ -276,24 +276,24 @@ else
 5.Order food in a food delivery app.(Like Uber Eats)
 
 - *-Customer*
-  - Data:loginCredentials,name,Address,Phone
+  - Data:loginCredentials,Name,Address,Phone
   - Behavior:logIn,GroupOrder,search,order,review,selectOtherFood,callDeliver
              receiveFood,filter,receivefood,note
 
 - *-OnlineShop*
-  - Data:name,location,Food
+  - Data:Name,Location,Food
   - Behavior:checkOut,sendToCustomer,notice
 
 - *-Food*
-  - Data:type,price,rank,number,
+  - Data:Type,Price,Rank,Number,
   - Behavior:
 
 - *-Physical restaurant*
-  - Data:Food,rank
+  - Data:Food,Rank
   - Behavior:receiveOrder,cook,sentToDeliver
 
 - *-Deliver*
-  - Data:Phone,name,id
+  - Data:Phone,Name,Id
   - Behavior:receiveOrder,deliverFood
 
 ```java
